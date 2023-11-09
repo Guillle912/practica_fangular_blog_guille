@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { Post } from 'src/app/interfaces/post.interface';
+import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
   selector: 'app-posts-card',
@@ -8,4 +9,10 @@ import { Post } from 'src/app/interfaces/post.interface';
 })
 export class PostsCardComponent {
   @Input() posts!: Post;
+  postsService = inject(PostsService);
+
+  onDeletePost( titulo: string ){
+    console.log(titulo);
+    this.postsService.deletePost( titulo)
+  }
 }

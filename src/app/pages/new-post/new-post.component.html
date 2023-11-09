@@ -1,1 +1,59 @@
-<p>new-post works!</p>
+<div class="fondo p-4">
+
+
+<div class="container">
+
+  <h2 class="text-light text-center py-3">Formulario para añadir más articulos al Blog</h2>
+  <h3 class="text-light text-center py-1">Siéntete libre de añadir los que consideres!</h3>
+  <form [formGroup]="myForm" (ngSubmit)="onCreatePost()" class="formulario row border p-3 mt-1 rounded bg-light">
+    <div>
+      <label class="form-label" for="">Titulo</label>
+      <input class="form-control" type="text" formControlName="titulo">
+      <span *ngIf="isValidField('titulo')" class="form-text text-danger">
+        Este campo es obligatorio
+      </span>
+    </div>
+    <div>
+      <label class="form-label" for="">Descripcion</label>
+      <textarea class="form-control" formControlName="texto"></textarea>
+      <span *ngIf="isValidField('texto')" class="form-text text-danger">
+        Este campo es obligatorio
+      </span>
+    </div>
+    <div>
+      <label class="form-label" for="">Imagen (URL de la imagen)</label>
+      <input class="form-control" type="text" formControlName="imagen">
+      <span *ngIf="isValidField('imagen')" class="form-text text-danger">
+        Este campo es obligatorio
+      </span>
+    </div>
+    <div>
+      <label class="form-label" for="">Fecha</label>
+      <input class="form-control" type="text" formControlName="fecha">
+      <span *ngIf="isValidField('fecha')" class="form-text text-danger">
+        Este campo es obligatorio
+      </span>
+    </div>
+    <div>
+      <label class="form-label" for="">Categoria</label>
+      <input class="form-control" type="text" formControlName="categoria">
+      <span *ngIf="isValidField('categoria')" class="form-text text-danger">
+        Este campo es obligatorio
+      </span>
+    </div>
+    <div>
+      <label class="form-label" for="">Mas Imganes (Opcional)</label>
+      <input class="form-control" type="text" formControlName="imagenes">
+    </div>
+    <div>
+      <label class="form-label" for="">Descripcion mas detallada (Opcional)</label>
+      <textarea class="form-control" formControlName="descripcion"></textarea>
+
+    </div>
+    <input (click)="onCreatePost()" class="btn btn-primary mt-2" type="submit" value="Enviar">
+
+  </form>
+
+</div>
+
+</div>

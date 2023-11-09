@@ -73,7 +73,16 @@ export class PostsService {
       },
 
     ];
+
+
+    this.loadLocalStorage();
+
   }
+
+  saveLocalStorage(): void {
+    localStorage.setItem('arrPosts', JSON.stringify(this.arrPosts));
+  }
+
 
   getAllPosts(){
     return this.arrPosts
@@ -91,5 +100,30 @@ export class PostsService {
 
   getCategory(){
     return [...new Set(this.arrPosts.map( post => post.categoria))]
+  }
+
+  createNewPost( pPost: Post ){
+    this.arrPosts.push( pPost );
+    this.saveLocalStorage();
+    this.loadLocalStorage();
+  }
+
+  deletePost( titulo: string){
+
+    const index = this.arrPosts.findIndex( post => post.titulo === titulo)
+    this.arrPosts.splice( index, 1);
+    localStorage.setItem('arrPosta', JSON.stringify(this.arrPosts));
+    this.saveLocalStorage();
+
+  }
+
+  loadLocalStorage(): void {
+    if ( !localStorage.getItem('arrPosts')) return;
+    this.arrPosts = JSON.parse(localStorage.getItem('arrPosts')!);
+
+  }
+
+  getByTitle( title: string ){
+    return this.arrPosts.filter( post => post.titulo === title)
   }
 }
