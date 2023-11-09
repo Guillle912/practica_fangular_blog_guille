@@ -9,10 +9,18 @@ import { PostsService } from 'src/app/services/posts.service';
 })
 export class ListaPostComponent {
   arrPosts: Post[] = [];
+  arrCategoria: string[] = [];
 
   postsService = inject(PostsService);
 
   constructor(){
     this.arrPosts = this.postsService.getAllPosts();
+    this.arrCategoria = this.postsService.getCategory()
+  }
+
+
+  filterByCategory( $event: any ){
+    this.arrPosts = this.postsService.filterByCategory( $event.target.value );
+    console.log( this.arrPosts)
   }
 }

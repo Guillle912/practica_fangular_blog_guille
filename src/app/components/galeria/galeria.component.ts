@@ -14,7 +14,28 @@ export class GaleriaComponent {
 
   constructor(){
     this.arrImagenes = this.postService.getAllImg();
+
+    const intervalo = setInterval(() =>{
+      this.imagenSeleccionada++
+      if( this.imagenSeleccionada === this.arrImagenes.length){
+        console.log('estoy aqui')
+        this.imagenSeleccionada = 0
+      }
+    }, 3000)
   }
+
+  // ngOnInit(){
+  //   const intervalo = setInterval(() =>{
+  //     this.imagenSeleccionada++
+  //     if( this.imagenSeleccionada === this.arrImagenes.length){
+  //       console.log('estoy aqui')
+  //       this.imagenSeleccionada = 0
+  //     }
+  //   }, 5000)
+
+
+  // }
+
   modificarImagen( incremento: boolean){
     if(incremento){
       this.imagenSeleccionada++;
@@ -22,4 +43,7 @@ export class GaleriaComponent {
       this.imagenSeleccionada--;
     }
   }
+
+
+
 }

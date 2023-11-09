@@ -30,6 +30,13 @@ export class PostsService {
         categoria: "Acción-aventura",
       },
       {
+        titulo: "Baldur's Gate 3",
+        texto: 'Embárcate en una aventura épica de rol en un mundo de fantasía basado en Dungeons & Dragons, tomando decisiones cruciales que moldearán tu historia.',
+        imagen: 'https://image.api.playstation.com/vulcan/ap/rnd/202302/2321/3098481c9164bb5f33069b37e49fba1a572ea3b89971ee7b.jpg',
+        fecha: '2023-10-25',
+        categoria: 'RPG'
+      },
+      {
         titulo: "Red Dead Redemption 2",
         texto: "Red Dead Redemption 2 es un videojuego de acción-aventura desarrollado y publicado por Rockstar Games. Es la precuela de Red Dead Redemption, y está ambientado en el oeste de los Estados Unidos durante la era del Salvaje Oeste. El juego fue lanzado el 26 de octubre de 2018 para PlayStation 4 y Xbox One.",
         imagen: "https://compass-ssl.xbox.com/assets/64/02/6402981a-9446-46d8-8289-e370f3158746.jpg?n=Red-Dead-Redemption-II_GLP-Page-Hero-1084_1920x1080.jpg",
@@ -41,7 +48,7 @@ export class PostsService {
         texto: "The Witcher 3: Wild Hunt es un videojuego de acción-aventura y rol desarrollado por CD Projekt RED y publicado por Warner Bros. Interactive Entertainment. Es la secuela de The Witcher 2: Assassins of Kings y la tercera entrega principal de la serie The Witcher. El juego fue lanzado el 19 de mayo de 2015 para PlayStation 4, Xbox One y Microsoft Windows.",
         imagen: "https://static.cdprojektred.com/thewitcher.com/gfx/witcher3/thumbnail-tw.jpg",
         fecha: "2015-05-19",
-        categoria: "Acción-aventura, rol",
+        categoria: "Rol",
       },
       {
         titulo: 'Cyberpunk 2077',
@@ -64,6 +71,7 @@ export class PostsService {
         fecha: '2023-10-30',
         categoria: 'Simulación'
       },
+
     ];
   }
 
@@ -73,5 +81,15 @@ export class PostsService {
 
   getAllImg(){
     return this.arrPosts.map( post => post.imagen )
+  }
+
+  filterByCategory(cat: string){
+    const category = this.arrPosts.filter( post => post.categoria === cat)
+    console.log( category);
+    return category
+  }
+
+  getCategory(){
+    return [...new Set(this.arrPosts.map( post => post.categoria))]
   }
 }

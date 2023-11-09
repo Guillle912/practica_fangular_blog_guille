@@ -10,3 +10,8 @@ img{
     transform: scale(1.1);
   }
 }
+
+
+.card{
+  background-color: #E0F4FF;
+}

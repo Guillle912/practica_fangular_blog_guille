@@ -1,8 +1,32 @@
 
-<div class="row">
-  <app-galeria class="col-12"></app-galeria>
-  <app-posts-card class="col-12 col-md-4 col-lg-6" *ngFor="let post of arrPosts"  [posts]="post"></app-posts-card>
-  <h2 class="fs-1 py-4">Juego recomendado <i class="bi bi-arrow-down-circle-fill"></i> </h2>
-  <app-posts-card class="col-12"[posts]="arrPosts[arrPosts.length - 1]"></app-posts-card>
+<div class="pb-4 bg-primary">
+  <app-galeria class="col-12 tamaño"></app-galeria>
+  <div class="container">
+    <h2 class="text-center text-light fs-1 py-5 fw-bold">Descubre un universo de entretenimiento digital con FofyConsolas.</h2>
+
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+
+    <div class="py-5">
+
+      <label class="form.label fs-1 fw-bold text-center text-primary-emphasis">Filtra tus juegos por categoria</label>
+      <select class="form-select "  (change)="filterByCategory( $event )">
+        <option value="" selected>Selecciona categoria</option>
+        <option *ngFor="let categoria of arrCategoria" value="{{categoria}}">{{categoria}}</option>
+      </select>
+
+
+    </div>
+
+    <app-posts-card class="col-12 col-md-4 col-lg-6" *ngFor="let post of arrPosts"  [posts]="post"></app-posts-card>
+
+    <div class="py-5">
+      <h2 class="fs-1 py-4">Juego recomendado <i class="bi bi-arrow-down-circle-fill"></i> </h2>
+      <app-posts-card class="col-12"[posts]="arrPosts[3]"></app-posts-card>
+    </div>
+  </div>
+
 </div>
 
