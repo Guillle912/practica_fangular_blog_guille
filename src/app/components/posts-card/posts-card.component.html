@@ -2,10 +2,11 @@
   <figure >
     <img class="card-img-top" [src]="posts.imagen" alt="">
   </figure>
-  <div class="card-body">
+  <div class="card-body text-primary-emphasis">
     <p class="card-text fs-6">{{posts.categoria}}</p>
     <h3 class="card-title fw-bold">{{posts.titulo}}</h3>
     <p class="card-text">{{posts.texto}}</p>
-    <button class="btn btn-primary">Leer mas</button>
+    <button class="btn btn-primary" [routerLink]="['/home', posts.titulo]">Leer mas</button>
+    <button class="btn btn-danger ms-1" (click)="onDeletePost(posts.titulo)">Borrar post</button>
   </div>
 </article>

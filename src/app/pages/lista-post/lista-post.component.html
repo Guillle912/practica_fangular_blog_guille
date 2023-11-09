@@ -11,9 +11,9 @@
 
     <div class="py-5">
 
-      <label class="form.label fs-1 fw-bold text-center text-primary-emphasis">Filtra tus juegos por categoria</label>
+      <label class="form.label fs-1 fw-bold text-center text-primary-emphasis py-4">Filtra tus juegos por categoria</label>
       <select class="form-select "  (change)="filterByCategory( $event )">
-        <option value="" selected>Selecciona categoria</option>
+        <option value="todos" selected>Selecciona categoria</option>
         <option *ngFor="let categoria of arrCategoria" value="{{categoria}}">{{categoria}}</option>
       </select>
 

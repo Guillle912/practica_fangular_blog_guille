@@ -21,20 +21,10 @@ export class GaleriaComponent {
         console.log('estoy aqui')
         this.imagenSeleccionada = 0
       }
-    }, 3000)
+    }, 5000)
   }
 
-  // ngOnInit(){
-  //   const intervalo = setInterval(() =>{
-  //     this.imagenSeleccionada++
-  //     if( this.imagenSeleccionada === this.arrImagenes.length){
-  //       console.log('estoy aqui')
-  //       this.imagenSeleccionada = 0
-  //     }
-  //   }, 5000)
 
-
-  // }
 
   modificarImagen( incremento: boolean){
     if(incremento){

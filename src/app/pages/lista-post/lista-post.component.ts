@@ -20,7 +20,12 @@ export class ListaPostComponent {
 
 
   filterByCategory( $event: any ){
-    this.arrPosts = this.postsService.filterByCategory( $event.target.value );
-    console.log( this.arrPosts)
+    if($event.target.value === 'todos'){
+      this.arrPosts = this.postsService.getAllPosts()
+    }else{
+      this.arrPosts = this.postsService.filterByCategory( $event.target.value );
+      console.log( this.arrPosts)
+
+    }
   }
 }

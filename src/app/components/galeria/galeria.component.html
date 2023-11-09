@@ -1,25 +1,20 @@
 <div class="card">
-  <figure class="">
-  <img [src]="arrImagenes[imagenSeleccionada]" class="card-img">
-  <div class=" text-center pt-4" >
+  <figure class="" style="background-image: url({{arrImagenes[imagenSeleccionada]}});">
 
-      <button
-        [disabled]="imagenSeleccionada === 0"
-        (click)="modificarImagen(false)"
-        class="btn btn-primary m-1">
+    <!-- <img [src]="arrImagenes[imagenSeleccionada]" class="card-img"> -->
+
+
+    <div class=" text-center pt-4">
+
+      <button [disabled]="imagenSeleccionada === 0" (click)="modificarImagen(false)" class="btn btn-primary m-1">
         <i class="bi bi-arrow-left-circle"></i>
       </button>
 
-      <button
-        [disabled]="imagenSeleccionada === arrImagenes.length - 1"
-        (click)="modificarImagen(true)"
+      <button [disabled]="imagenSeleccionada === arrImagenes.length - 1" (click)="modificarImagen(true)"
         class="btn btn-primary m-1">
         <i class="bi bi-arrow-right-circle"></i>
       </button>
 
-  </div>
-
-
-
-</figure>
+    </div>
+  </figure>
 </div>
