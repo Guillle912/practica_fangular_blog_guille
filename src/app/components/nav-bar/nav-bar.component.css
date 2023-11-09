@@ -1,0 +1,44 @@
+nav{
+
+  background-color: black;
+  color: white;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+ul li{
+  display: block;
+  padding: 0 10px;
+  cursor: pointer;
+
+  &:hover{
+    color: blanchedalmond;
+  }
+}
+
+
+.rrss{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+  padding: 10px;
+}
+
+
+.menu-busqueda{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
