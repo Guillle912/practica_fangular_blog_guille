@@ -21,7 +21,7 @@ export class GaleriaComponent {
         console.log('estoy aqui')
         this.imagenSeleccionada = 0
       }
-    }, 5000)
+    }, 3000)
   }
 
 

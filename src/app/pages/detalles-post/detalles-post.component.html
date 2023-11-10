@@ -1,8 +1,14 @@
+<div class="container">
+  <h1 class="fs-1 fw-bolder pt-5">{{ post[0].titulo }}</h1>
+  <p>{{post[0].categoria}}</p>
+  <p class="fs-4 fw-bold">{{post[0].texto}}</p>
+  <figure class="imagenes">
+    <img class="imagen" *ngFor="let imagen of post[0].imagenes" [src]="imagen" alt="">
+    <figcaption>Imagenes del juego</figcaption>
+  </figure>
 
-<h1>
-  {{ post[0].titulo }}
-
-</h1>
-<figure>
-  <img [src]="post[0].imagen" alt="">
-</figure>
+  <p class="parrafo">{{ post[0].descripcion }}</p>
+  <figure>
+    <img [src]="post[0].imagen" alt="">
+  </figure>
+</div>
