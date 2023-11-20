@@ -14,6 +14,10 @@ export class DetallesPostComponent {
   postsService = inject(PostsService);
   postTitulo: string = '';
 
+  /**
+   *
+   * @param titulo titulo del post, necesario para caragar los detalles de la pagina
+   */
   cargarPost(titulo:string){
     this.post = this.postsService.getByTitle(titulo);
   }

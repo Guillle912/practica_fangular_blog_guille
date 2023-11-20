@@ -11,6 +11,10 @@ export class PostsCardComponent {
   @Input() posts!: Post;
   postsService = inject(PostsService);
 
+  /**
+   *
+   * @param titulo titulo del post que deseas borrar
+   */
   onDeletePost( titulo: string ){
     console.log(titulo);
     this.postsService.deletePost( titulo)

@@ -6,6 +6,7 @@ import { Post } from '../interfaces/post.interface';
 })
 export class PostsService {
   arrPosts: Post[] = [];
+
   constructor() {
     this.arrPosts = [
       {
@@ -13,13 +14,13 @@ export class PostsService {
         texto: "Super Mario Odyssey es un videojuego de plataformas desarrollado y publicado por Nintendo para Nintendo Switch. Es la secuela de Super Mario Galaxy y Super Mario 3D World, y la decimocuarta entrega principal de la serie Super Mario. El juego fue lanzado el 27 de octubre de 2017 en todo el mundo.",
         imagen: "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2017/08/super-mario-odyssey_1.jpg?tf=3840x",
         fecha: "2017-10-27",
-        categoria: "Plataformas",
-        descripcion:`"Super Mario Odyssey" es un videojuego de plataformas desarrollado y publicado por Nintendo para la consola Nintendo Switch. Fue lanzado en octubre de 2017 y se convirtió en uno de los títulos más destacados de la plataforma. Aquí tienes una descripción general de sus características clave:
+        categoria: "Plataformas, Aventuras ",
+        descripcion:`<h2>"Super Mario Odyssey" es un videojuego de plataformas desarrollado y publicado por Nintendo para la consola Nintendo Switch. Fue lanzado en octubre de 2017 y se convirtió en uno de los títulos más destacados de la plataforma. Aquí tienes una descripción general de sus características clave:
 
-        Mundo Abierto y Exploración:
+        Mundo Abierto y Exploración:</h2>
 
-        "Super Mario Odyssey" presenta un diseño de mundo abierto no lineal, permitiendo a los jugadores explorar diversos reinos llenos de secretos y desafíos. Cada reino tiene su propio tema único, desde desiertos hasta ciudades modernas y mundos surrealistas.
-        Sombrero Mágico:
+        <p>"Super Mario Odyssey" presenta un diseño de mundo abierto no lineal, permitiendo a los jugadores explorar diversos reinos llenos de secretos y desafíos. Cada reino tiene su propio tema único, desde desiertos hasta ciudades modernas y mundos surrealistas.
+        Sombrero Mágico:</p>
 
         La principal novedad en el juego es la inclusión del sombrero mágico llamado Cappy. Mario puede lanzar su sombrero para poseer y tomar el control de diversos objetos y enemigos, lo que agrega una nueva capa de jugabilidad y resuelve puzles de manera única.
         Viaje alrededor del Mundo:
@@ -48,7 +49,7 @@ export class PostsService {
         texto: "The Legend of Zelda: Breath of the Wild es un videojuego de acción-aventura desarrollado y publicado por Nintendo para Nintendo Switch. Es la secuela de The Legend of Zelda: Skyward Sword y la decimoquinta entrega principal de la serie The Legend of Zelda. El juego fue lanzado el 3 de marzo de 2017 en todo el mundo.",
         imagen: "https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/wiiu_14/SI_WiiU_TheLegendOfZeldaBreathOfTheWild_image1600w.jpg",
         fecha: "2017-03-03",
-        categoria: "Acción-aventura",
+        categoria: "Acción-aventura, RPG",
         descripcion:`"The Legend of Zelda: Breath of the Wild" es un videojuego de acción y aventuras desarrollado y publicado por Nintendo. Lanzado en marzo de 2017 como título de lanzamiento para la consola Nintendo Switch, también está disponible para la consola Wii U. Aquí tienes una descripción general de sus características clave:
 
         Mundo Abierto y Exploración:
@@ -127,7 +128,7 @@ export class PostsService {
         texto: 'Embárcate en una aventura épica de rol en un mundo de fantasía basado en Dungeons & Dragons, tomando decisiones cruciales que moldearán tu historia.',
         imagen: 'https://image.api.playstation.com/vulcan/ap/rnd/202302/2321/3098481c9164bb5f33069b37e49fba1a572ea3b89971ee7b.jpg',
         fecha: '2023-10-25',
-        categoria: 'RPG',
+        categoria: 'RPG, Rol',
         descripcion:`"Baldur's Gate 3" es un videojuego de rol (RPG) desarrollado y publicado por Larian Studios. Lanzado en acceso anticipado en octubre de 2020, el juego está basado en el universo de Dungeons & Dragons y sirve como la tercera entrega de la serie "Baldur's Gate". Aquí tienes una descripción general de sus características principales:
 
         Universo Dungeons & Dragons:
@@ -162,7 +163,7 @@ export class PostsService {
         texto: "Red Dead Redemption 2 es un videojuego de acción-aventura desarrollado y publicado por Rockstar Games. Es la precuela de Red Dead Redemption, y está ambientado en el oeste de los Estados Unidos durante la era del Salvaje Oeste. El juego fue lanzado el 26 de octubre de 2018 para PlayStation 4 y Xbox One.",
         imagen: "https://compass-ssl.xbox.com/assets/64/02/6402981a-9446-46d8-8289-e370f3158746.jpg?n=Red-Dead-Redemption-II_GLP-Page-Hero-1084_1920x1080.jpg",
         fecha: "2018-10-26",
-        categoria: "Westerm",
+        categoria: "Westerm, RPG",
         descripcion:`"Red Dead Redemption 2" es un videojuego de acción y aventuras desarrollado por Rockstar Games. Lanzado en octubre de 2018 para PlayStation 4, Xbox One y Microsoft Windows, es la secuela de "Red Dead Redemption" y está ambientado en el Salvaje Oeste americano a fines del siglo XIX. A continuación, se describen algunas de las características más destacadas:
 
         Historia Épica:
@@ -194,7 +195,7 @@ export class PostsService {
         texto: "The Witcher 3: Wild Hunt es un videojuego de acción-aventura y rol desarrollado por CD Projekt RED y publicado por Warner Bros. Interactive Entertainment. Es la secuela de The Witcher 2: Assassins of Kings y la tercera entrega principal de la serie The Witcher. El juego fue lanzado el 19 de mayo de 2015 para PlayStation 4, Xbox One y Microsoft Windows.",
         imagen: "https://static.cdprojektred.com/thewitcher.com/gfx/witcher3/thumbnail-tw.jpg",
         fecha: "2015-05-19",
-        categoria: "Rol",
+        categoria: "Rol, RPG, Acción-aventura",
         descripcion:`"The Witcher 3: Wild Hunt" es un videojuego de rol de acción desarrollado y publicado por CD Projekt. Lanzado en mayo de 2015, es la tercera entrega de la serie "The Witcher" y se basa en las novelas del autor polaco Andrzej Sapkowski. Aquí tienes una descripción general de algunas de las características clave del juego:
 
         Mundo Abierto y Exploración:
@@ -229,7 +230,7 @@ export class PostsService {
         texto: 'Explora Night City en este juego de rol de mundo abierto con una historia inmersiva y gráficos impactantes.',
         imagen: 'https://i.blogs.es/b109e9/cyberpunk2077-johnny-v-rgb_en/1366_2000.jpg',
         fecha: '2023-11-06',
-        categoria: 'RPG',
+        categoria: 'RPG, Shooter',
         descripcion:`"Cyberpunk 2077" es un videojuego de rol de acción desarrollado y publicado por CD Projekt, lanzado en diciembre de 2020 para diversas plataformas, incluyendo Microsoft Windows, PlayStation 4, Xbox One y Google Stadia. El juego también fue lanzado posteriormente para las consolas de nueva generación, PlayStation 5 y Xbox Series X/S.
 
         Principales características de "Cyberpunk 2077":
@@ -267,7 +268,7 @@ export class PostsService {
         texto: 'Embárcate en un viaje desafiante a través del inframundo en este juego rogue-like lleno de acción y mitología.',
         imagen: 'https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_Hades_image1600w.png',
         fecha: '2023-11-04',
-        categoria: 'Acción',
+        categoria: 'Acción, Rol',
         descripcion:`"Hades" es un videojuego de acción roguelike desarrollado por Supergiant Games.
          Fue lanzado inicialmente en acceso anticipado en diciembre de 2018 y se lanzó oficialmente en septiembre de 2020 para Microsoft Windows, macOS y Nintendo Switch.
          Posteriormente, se lanzó en otras plataformas, como PlayStation y Xbox.
@@ -335,39 +336,67 @@ export class PostsService {
     ];
 
 
+
     this.loadLocalStorage();
 
   }
 
+  /**
+   * guarda los datos en el localStore cuando se llama
+   */
   saveLocalStorage(): void {
     localStorage.setItem('arrPosts', JSON.stringify(this.arrPosts));
   }
 
-
+  /**
+   *
+   * @returns todos los post en la base de datos
+   */
   getAllPosts(){
     return this.arrPosts
   }
-
+  /**
+   *
+   * @returns todas las imagenes de los posts
+   */
   getAllImg(){
     return this.arrPosts.map( post => post.imagen )
   }
-
+  /**
+   *
+   * @param cat categoria a filtrar
+   * @returns un array con los objetos que contengan la categoria que se busca
+   */
   filterByCategory(cat: string){
-    const category = this.arrPosts.filter( post => post.categoria === cat)
+    const category = this.arrPosts.filter( post => post.categoria.includes(cat))
     console.log( category);
     return category
   }
-
+  /**
+   * funcion que filtra las categorias y las recoge
+   * @returns devuelve un array de ellas sin repetir
+   */
   getCategory(){
-    return [...new Set(this.arrPosts.map( post => post.categoria))]
+    let categorias = this.arrPosts.map( post => post.categoria)
+    let arrCategorias = categorias.map( categoria => categoria.split(',') )
+    let cleanCategorias = arrCategorias.join(',').split(',').map( categoria => categoria.trim())
+    console.log( cleanCategorias)
+    return [...new Set(cleanCategorias)]
   }
-
+  /**
+   *
+   * @param pPost un nuevo post para publicar
+   * a continuacion se guarda el localStorage y acto seguido se carga
+   */
   createNewPost( pPost: Post ){
     this.arrPosts.push( pPost );
     this.saveLocalStorage();
     this.loadLocalStorage();
   }
-
+  /**
+   *
+   * @param titulo para eliminar el post del array y del localStorage
+   */
   deletePost( titulo: string){
 
     const index = this.arrPosts.findIndex( post => post.titulo === titulo)

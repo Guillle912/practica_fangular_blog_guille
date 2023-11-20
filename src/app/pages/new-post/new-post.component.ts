@@ -28,6 +28,11 @@ export class NewPostComponent {
     })
   }
 
+  /**
+   * funcion para validar campos de formulario
+   * @param field campo a verificar
+   * @returns
+   */
   isValidField( field: string){
     return this.myForm.controls[field].errors && this.myForm.controls[field].touched;
   }

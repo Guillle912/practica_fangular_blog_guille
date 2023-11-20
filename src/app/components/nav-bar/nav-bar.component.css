@@ -51,3 +51,21 @@ ul li{
   font-size: 60px;
   font-weight: 800;
 }
+
+
+
+
+@media (max-width: 700px){
+
+  .container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .titulo{
+    font-family: 'Changa', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+  }
+}

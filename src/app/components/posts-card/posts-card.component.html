@@ -3,10 +3,12 @@
     <img class="card-img-top" [src]="posts.imagen" alt="">
   </figure>
   <div class="card-body text-primary-emphasis">
-    <p class="card-text fs-6">{{posts.categoria}}</p>
+    <span class="card-text fs-6 " *ngFor="let categoria of posts.categoria.split(',') | slice:0:3">
+      <span class="badge bg-primary me-1 mb-2">{{categoria}}</span>
+    </span>
     <h3 class="card-title fw-bold">{{posts.titulo}}</h3>
     <p class="card-text">{{posts.texto}}</p>
-    <button class="btn btn-primary" [routerLink]="['/home', posts.titulo]">Leer mas</button>
+    <button class="btn btn-primary" [routerLink]="['/home', posts.titulo]">Leer más</button>
     <button class="btn btn-danger ms-1" (click)="onDeletePost(posts.titulo)">Borrar post</button>
   </div>
 </article>
